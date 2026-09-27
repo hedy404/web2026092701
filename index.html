@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>磁吸核弹</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="stage">
+    <div id="shakeWrap">
+      <canvas id="game" width="320" height="480" draggable="false"></canvas>
+      <div id="flash"></div>
+    </div>
+
+    <div id="result" class="hidden">
+      <div class="panel">
+        <canvas id="boomArt" class="boom-art" width="104" height="44"></canvas>
+        <div class="panel-title">💥 任务失败</div>
+        <div class="row"><span>本局得分</span><b id="finalScore">0</b></div>
+        <div class="row"><span>最佳纪录</span><b id="bestScore">0</b></div>
+        <div id="newRecord" class="new-record hidden">★ 新纪录！</div>
+        <button id="restartBtn" type="button">再来一次</button>
+        <div class="hint">空格 / Enter 也可以重开</div>
+      </div>
+    </div>
+  </div>
+
+  <button id="muteBtn" type="button" title="音效开关">🔊</button>
+  <div id="flashFull"></div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
